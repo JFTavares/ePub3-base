@@ -1,0 +1,338 @@
+@charset "utf-8";
+
+/* Importa o CSS das fontes.
+*/
+@import '../Styles/fontes.css';
+
+@namespace epub 'http://www.idpf.org/2007/ops';
+
+/* Define as margens, sobretudo para ADE e derivados. */
+@page {
+margin-left: 1em;
+margin-right: 1em;
+margin-top: 0.5em;
+margin-bottom: 0.5em;
+}
+
+/* Remove as margens, sobretudo em sistemas webkit. */
+body {
+  margin: 0;
+}
+
+body.noLinear {
+max-width: 1024px;
+font-size: 1.4em;
+padding: 1.5em;
+}
+
+
+/*  Desativa a hifenização nos titulos e a quebra das paginas. */
+h1, h2, h3, h4, h5, h6 {
+	  -epub-hyphens: none;
+  -webkit-hyphens: none;
+     -moz-hyphens: none;
+          hyphens: none;
+ page-break-after:avoid;
+
+}
+
+/* Controle de orfãs e viúvas. */
+p,
+blockquote {
+  orphans: 2;
+  widows: 2;
+}
+
+/*  Hifenização para paragráfos. */
+p,
+figcaption {
+	  -epub-hyphens: auto;
+  -webkit-hyphens: auto;
+     -moz-hyphens: auto;
+          hyphens: auto;
+}
+
+/*  Estilos do texto
+*/
+p {
+    font-family: Alegreya, Georgia, serif;
+    font-size: 1em;
+    font-style: normal;
+	  font-weight: normal;
+    margin:0;
+    text-indent: 0em;
+    line-height: 1.4em;
+    text-align: justify;
+	margin-bottom: 0.3em;
+text-indent:1.5em;
+    }
+
+p.firstPara    {
+    text-indent:0em;
+    }
+a
+    {
+    color: inherit;
+    text-decoration:none;
+    }
+h1
+    {
+    font-family: Alegreya, Georgia, serif;
+    font-size: 2em;
+    font-style: normal;
+	font-weight: normal;
+    margin-top: 1em;
+    margin-bottom:3em;
+    text-align: center;
+    text-indent: 0;
+	 color:#c92a17;
+    }
+h2
+    {
+    font-family: Georgia, serif;
+    font-size: 1.2em;
+    font-style: normal;
+	  font-weight: bold;
+    margin-top: 1em;
+    margin-bottom:2em;
+    text-align: center;
+    text-indent: 0;
+    }
+h3
+    {
+    font-family: Georgia, serif;
+    font-size: 1.2em;
+    font-style: normal;
+	  font-weight: bold;
+    margin-top: 1em;
+    margin-bottom:2em;
+    text-align: center;
+    text-indent: 0;
+    }
+h4
+    {
+    font-family: Georgia, serif;
+    font-size: 1.2em;
+    font-style: normal;
+	  font-weight: bold;
+    margin-top: 1em;
+    margin-bottom:2em;
+    text-align: center;
+    text-indent: 0;
+    }
+h5
+    {
+    font-family: Georgia, serif;
+    font-size: 1.2em;
+    font-style: normal;
+	  font-weight: bold;
+    margin-top: 1em;
+    margin-bottom:2em;
+    text-align: center;
+    text-indent: 0;
+    }
+h6
+    {
+    font-family: Georgia, serif;
+    font-size: 1.2em;
+    font-style: normal;
+	  font-weight: bold;
+    margin-top: 1em;
+    margin-bottom:2em;
+    text-align: center;
+    text-indent: 0;
+    }
+
+p.firstPara:first-line {
+	font-variant: small-caps;
+	font-size: 1.1em;
+}
+
+p.firstPara:first-letter {
+	font-size: 2.9em;
+	float: left;
+	line-height: 1em;
+	margin-bottom: -0.2em;
+}
+
+
+h1.tituloLivro {
+    font-family: "Gotham Narrow Ultra";
+	margin-bottom: 0em;
+	margin-top: 3em;
+}
+
+h1.partes {
+    font-family: "Gotham Narrow Ultra";
+	margin-bottom: 2em;
+	margin-top: 3em;
+}
+
+.autor
+    {
+    font-size: 1em;
+    text-indent: 0em;
+    text-align: center;
+    margin-bottom: 1.17em;
+text-indent:0em;
+    }
+
+.noindent {
+text-indent:0em;
+}
+
+.creditos
+    {
+    font-size: .9em;
+    text-indent: 0em;
+    text-align: center;
+    margin-left: 0;
+    margin-bottom: 1em;
+text-indent:0em;
+    }
+
+div.midias {
+
+margin-top: 3em;
+}
+
+section.creditos {
+margin-top: 10%;
+}
+
+section.sumario {
+margin-left: 2em;
+}
+
+
+
+blockquote
+    {
+    margin-left:2.5em;
+    margin-right:1em;
+    text-indent:-1em;
+    text-align: left;
+    }
+
+.left
+    {
+    text-align: left;
+    }
+.center
+    {
+    text-align: center;
+    text-indent:0em;
+    }
+.right
+    {
+    text-align: right;
+    }
+.bold, strong, b
+    {
+    font-weight: bold;
+    }
+.italic, em, i
+    {
+    font-style: italic;
+    }
+
+img
+    {
+    max-width: 100%;
+    }
+
+pre
+    {
+    margin:0pt;
+    font-family:monospace;
+    text-indent:0em;
+    text-align: left;
+    font-size: .80em;
+    white-space: pre-wrap;
+    }
+
+table
+    {
+    cellpadding: 1px;
+    cellspacing: 2px;
+    rules:all;
+    display: inline-table;
+    border-collapse:collapse;
+    margin-left:0px;
+    margin-right:0px;
+    }
+tr
+    {
+    }
+td
+    {
+    border:1px solid black;
+    }
+
+
+.break
+    {
+    	page-break-before: always;
+    }
+hr
+    {
+    width: 70%;
+    margin-left: 15%;
+    }
+    
+span.fakesmallcaps {font-size: .75em}
+
+div.boxImagem, div.boxVideo {
+text-align: center;
+margin-top: 1em;
+margin-bottom: 1em;
+}
+
+
+a.touchLink {
+color: #c92a17;
+}
+
+
+
+div.boxTexto {
+border: 2px solid #c92a17;
+padding: 1em;
+margin-top: 1em;
+margin-bottom: 1em;
+border-radius: 10px;
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+max-width: 90%;
+margin-left: 5%;
+margin-right: 5%;
+-webkit-box-shadow: 16px 17px 15px -20px rgba(0,0,0,0.67);
+-moz-box-shadow: 16px 17px 15px -20px rgba(0,0,0,0.67);
+box-shadow: 16px 17px 15px -20px rgba(0,0,0,0.67);
+background-color: #feefed; 
+display: none;
+}
+
+div.boxTexto p {
+	text-indent: 0;
+}
+
+p.escolha {
+text-align: center;
+text-indent: 0;
+margin: 0;
+}
+
+p.legenda {
+text-indent: 0;
+text-align: center;
+font-weight: bold;
+margin: 0;
+}
+
+p.voltar {
+text-align: center;
+margin-top: 1em;
+text-indent: 0;
+}
+
