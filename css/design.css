@@ -1,12 +1,45 @@
 @charset "utf-8";
-
-/* Importa o CSS das fontes.
-*/
-@import '../Styles/fontes.css';
-
 @namespace epub 'http://www.idpf.org/2007/ops';
 
-/* Define as margens, sobretudo para ADE e derivados. */
+/* =============================================================*/
+/* SUMARIO 							   							*/
+/* 1. Definir o CSS das fontes 									*/
+/* 2. Definir as margens, sobretudo para ADE e derivados 		*/
+/* 3. Remove as margens, sobretudo em sistemas webkit 			*/
+/* 4. Desativa a hifenização nos titulos						*/
+/* 5. Controle de orfãs e viúvas para todo o texto 				*/
+/* 6. Ativa a hifenização para parágrafos 						*/
+/* 7. Define o estilo do parágrafo básico 						*/
+/* 8. Definição dos títulos de capítulos e sub-capítulos 		*/
+/* 9. Definição dos estilos do texto 							*/
+/* 10. Definição de tabelas 									*/
+/* 11. Formatação de links, cores e decoração  					*/
+/* ============================================================	*/
+
+
+/* 1. Definir o CSS das fontes */
+@font-face {
+    font-family: Alegreya;
+    font-style: normal;
+    font-weight: normal;
+    src: url("../Fonts/Alegreya-Regular.otf");
+}
+
+@font-face {
+    font-family: Alegreya;
+    font-style: italic;
+    font-weight: normal;
+    src: url("../Fonts/Alegreya-Italic.otf");
+}
+
+@font-face {
+    font-family: Alegreya;
+    font-style: normal;
+    font-weight: bold;
+    src: url("../Fonts/Alegreya-Bold.otf");
+}
+
+/* 2. Definir as margens, sobretudo para ADE e derivados. */
 @page {
 margin-left: 1em;
 margin-right: 1em;
@@ -14,19 +47,13 @@ margin-top: 0.5em;
 margin-bottom: 0.5em;
 }
 
-/* Remove as margens, sobretudo em sistemas webkit. */
+/* 3. Remove as margens, sobretudo em sistemas webkit. */
 body {
   margin: 0;
 }
 
-body.noLinear {
-max-width: 1024px;
-font-size: 1.4em;
-padding: 1.5em;
-}
 
-
-/*  Desativa a hifenização nos titulos e a quebra das paginas. */
+/*  4. Desativa a hifenização nos titulos e a quebra das paginas. */
 h1, h2, h3, h4, h5, h6 {
 	  -epub-hyphens: none;
   -webkit-hyphens: none;
@@ -36,14 +63,14 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
-/* Controle de orfãs e viúvas. */
+/* 5. Controle de orfãs e viúvas para todo o texto */
 p,
 blockquote {
   orphans: 2;
   widows: 2;
 }
 
-/*  Hifenização para paragráfos. */
+/*  6. Ativa a Hifenização para parágrafos */
 p,
 figcaption {
 	  -epub-hyphens: auto;
@@ -52,29 +79,21 @@ figcaption {
           hyphens: auto;
 }
 
-/*  Estilos do texto
-*/
+/*  7. Define o estilo do parágrafo básico */
 p {
     font-family: Alegreya, Georgia, serif;
     font-size: 1em;
     font-style: normal;
-	  font-weight: normal;
+	font-weight: normal;
     margin:0;
     text-indent: 0em;
     line-height: 1.4em;
     text-align: justify;
 	margin-bottom: 0.3em;
-text-indent:1.5em;
+	text-indent:1.5em;
     }
-
-p.firstPara    {
-    text-indent:0em;
-    }
-a
-    {
-    color: inherit;
-    text-decoration:none;
-    }
+    
+/*  8. Definição dos títulos de capítulos e sub-capítulos */
 h1
     {
     font-family: Alegreya, Georgia, serif;
@@ -142,6 +161,9 @@ h6
     text-align: center;
     text-indent: 0;
     }
+    
+/*  9. Definição dos estilos do texto */
+
 
 p.firstPara:first-line {
 	font-variant: small-caps;
@@ -154,6 +176,11 @@ p.firstPara:first-letter {
 	line-height: 1em;
 	margin-bottom: -0.2em;
 }
+
+p.firstPara    {
+    text-indent:0em;
+    }
+    
 
 
 h1.tituloLivro {
@@ -251,24 +278,6 @@ pre
     white-space: pre-wrap;
     }
 
-table
-    {
-    cellpadding: 1px;
-    cellspacing: 2px;
-    rules:all;
-    display: inline-table;
-    border-collapse:collapse;
-    margin-left:0px;
-    margin-right:0px;
-    }
-tr
-    {
-    }
-td
-    {
-    border:1px solid black;
-    }
-
 
 .break
     {
@@ -288,30 +297,6 @@ margin-top: 1em;
 margin-bottom: 1em;
 }
 
-
-a.touchLink {
-color: #c92a17;
-}
-
-
-
-div.boxTexto {
-border: 2px solid #c92a17;
-padding: 1em;
-margin-top: 1em;
-margin-bottom: 1em;
-border-radius: 10px;
--webkit-border-radius: 10px;
--moz-border-radius: 10px;
-max-width: 90%;
-margin-left: 5%;
-margin-right: 5%;
--webkit-box-shadow: 16px 17px 15px -20px rgba(0,0,0,0.67);
--moz-box-shadow: 16px 17px 15px -20px rgba(0,0,0,0.67);
-box-shadow: 16px 17px 15px -20px rgba(0,0,0,0.67);
-background-color: #feefed; 
-display: none;
-}
 
 div.boxTexto p {
 	text-indent: 0;
@@ -334,5 +319,37 @@ p.voltar {
 text-align: center;
 margin-top: 1em;
 text-indent: 0;
+}
+
+
+/* 10. Definição de tabelas 				*/
+
+table
+    {
+    cellpadding: 1px;
+    cellspacing: 2px;
+    rules:all;
+    display: inline-table;
+    border-collapse:collapse;
+    margin-left:0px;
+    margin-right:0px;
+    }
+tr
+    {
+    }
+td
+    {
+    border:1px solid black;
+    }
+
+/* 11. Formatação de links, cores e decoração  */
+a
+    {
+    color: inherit;
+    text-decoration:none;
+    }
+
+a.touchLink {
+	color: #c92a17;
 }
 

@@ -1,0 +1,61 @@
+
+
+/* ------------ DEFINIÇÃO DA FICHA CATALOGRAFICA ------------ */
+
+.titficha {
+text-align: center;
+font-size: 80%;
+margin: 1em 0 0 0;
+page-break-after: avoid;
+}
+
+.ficha {
+border: 1px solid;
+padding: 0.5em;
+margin: 0em 0 1em 0;
+page-break-before: avoid;
+
+}
+
+.ficha p {
+margin: 0;
+font-size: 80%;
+
+}
+
+.ficha .autor {
+margin-top: 1em;
+margin-left: 4em;
+}
+
+.ficha .titulo {
+text-indent: -4em;
+margin-bottom: 1em;
+margin-left: 4em;
+
+}
+
+span.notacaoAutor {
+margin-right: 3em;
+}
+
+.ficha .traducao, .ficha .info, .ficha .isbn {
+margin-left: 6em;
+}
+
+.ficha .classifica {
+margin: 1em 0;
+text-indent: 2em;
+margin-left: 4em;
+}
+
+.ficha .num {
+float: left;
+text-indent: 0em;
+}
+
+.ficha .CDU, .ficha .CDD {
+text-align: right;
+}
+
+/* ------------FIM DA FICHA CATALOGRAFICA ------------ */
