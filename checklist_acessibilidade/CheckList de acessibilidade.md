@@ -1,0 +1,79 @@
+# Checklist de acessibilidade 
+
+## Exigências do PNLD
+
+- [ ] créditos **DEVEM** ser deslocados para o final do livro, com referência de origem
+- [ ] marcações **OBRIGATÓRIAS**
+	- [ ] a. títulos e subtítulos
+	- [ ] b. descrições de imagens (exceto em casos ilustrativos) - modelo DIAGRAM
+	- [ ] c. legendas de imagens
+	- [ ] d. glossários
+	- [ ] e. notas de rodapé
+	- [ ] f. páginas (com criação de lista de navegação)
+	- [ ] g. tabelas
+- [ ] marcações **RECOMENDADAS**
+	- [ ] a. links internos
+	- [ ] b. cores
+	- [ ] c. estilos de fontes (tipologia)
+	- [ ] d. boxes e destaques
+
+- [ ] **DEVEM** ser adaptados
+	- [ ] a. referências baseadas em posição (acima, abaixo etc)
+	- [ ] b. excluir conteúdos (textos) incompatíveis (e.g. “não escreva neste livro”)
+- [ ] **PODEM** ser adaptados
+	- [ ] a. exercícios incompatíveis com as necessidades do aluno (e.g. caça-palavras)
+	- [ ] b. conteúdos de páginas duplas
+	- [ ] c. frases nas fronteiras das páginas, garantindo fluência na leitura
+- [ ] O sumário digital DEVE conter, no mínimo, as mesmas informações do sumário impresso
+	- [ ] a. **DEVEM** ser adaptados pulos na sequência (e.g. H1 para H3)
+	- [ ] b. **PODEM** ser incluídos mais elementos de navegação
+	- [ ] c. **PODEM** ser adaptados conteúdos cuja ocorrência no miolo impossibilite a marcação direta no sumário (e.g. título inexistente, título de uma história em quadrinhos etc)
+- [ ] **DEVEM** ser marcadas a granularidade para highlight no nível das frases ou pausas fonéticas
+- [ ] **DEVEM** ser feitas correções fonéticas pertinentes ao conteúdo e que não comprometam o entendimento
+	- [ ] a. siglas
+	- [ ] b. abreviaturas
+	- [ ] c. palavras homógrafas
+	- [ ] d. unidades de medida
+	- [ ] e. palavras estrangeiras
+	- [ ] f. termos em destaque (pintados, circulados etc)
+- [ ] São **OPTATIVOS** os ajustes fonéticos nos casos meramente estéticos
+- [ ] **DEVEM** ser embarcado os áudios em todos os livros
+- [ ] **DEVEM** ser encurtados todos os links
+	- [ ] a. criar lista (final do livro) com os links encurtados e seus respectivos originais
+- [ ] **PODEM** ser criados sumários específicos
+	- [ ] a. para tabelas/quadros (lot)
+	- [ ] b. imagens (loi)
+	- [ ] c. áudios de mídias externas (loa)
+- [ ] É **RECOMENDADA** a inclusão das fórmulas no formato MathML
+	- [ ] a. **PODEM** ser incluídas fórmulas como imagens
+	- [ ] b. **DEVEM** ser criados textos alternativos (descrições) para todas as fórmulas
+		- [ ] i. não pode haver ambiguidade
+		- [ ] ii. somente quando necessário deve-se diferenciar letras maiúsculas e minúsculas
+- [ ] Nos livros de Biologia DEVEM ser diferenciadas letras maiúsculas e minúsculas quando forem semanticamente diferentes (e.g. genética)
+- [ ] Para a homologação **DEVEM** ser utilizados
+	- [ ] a. validador semântico epubcheck
+	- [ ] b. Readium ou outro leitor a ser criado/fornecido pelo MEC
+	- [ ] c. verificação manual
+
+## Verificação Booknando
+- [ ] Todo texto deve ser disponibilizado em uma ordem de leitura lógica
+- [ ] Separação entre conteúdo (HTML) e apresentação (CSS)
+- [ ] Uso de sumários e sistemas de navegação
+	- [ ] Nav
+	- [ ] page-list
+	- [ ] landmarks
+- [ ] Estrutura significativa com as tags HTML
+- [ ]  Defina o conteúdo de cada etiqueta
+	- [ ] Uso do epub:type
+	- [ ] Uso do ARIA
+- [ ] Imagens somente para imagens e não para tabelas ou texto
+- [ ]  Tag alt para a descrição das imagens
+- [ ] Numeração de página (epub:type="pagebreak")
+- [ ] Língua do documento em cada HTML: pt-br
+- [ ] MathML
+- [ ] Acesso alternativo ao conteúdo multimídia
+- [ ] Interações acessíveis
+- [ ] Metadados de acessibilidade
+- [ ] Verificação com o ACE - consórcio Daisy
+- [ ] Verificação do editor
+- [ ] Verificação manual de sincronicidade
