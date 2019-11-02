@@ -1,6 +1,28 @@
 # Checklist de acessibilidade 
 
-## Exigências do PNLD
+- [ ] Todo texto deve ser disponibilizado em uma ordem de leitura lógica
+- [ ] Separação entre conteúdo (HTML) e apresentação (CSS)
+- [ ] Uso de sumários e sistemas de navegação
+	- [ ] Nav
+	- [ ] page-list
+	- [ ] landmarks
+- [ ] Estrutura significativa com as tags HTML
+- [ ]  Defina o conteúdo de cada etiqueta
+	- [ ] Uso do epub:type
+	- [ ] Uso do ARIA
+- [ ] Imagens somente para imagens e não para tabelas ou texto
+- [ ]  Tag alt para a descrição das imagens
+- [ ] Numeração de página (epub:type="pagebreak")
+- [ ] Língua do documento em cada HTML: pt-br
+- [ ] MathML
+- [ ] Acesso alternativo ao conteúdo multimídia
+- [ ] Interações acessíveis
+- [ ] Metadados de acessibilidade
+- [ ] Verificação com o ACE - consórcio Daisy
+- [ ] Verificação do editor
+- [ ] Verificação manual de sincronicidade
+
+## Indicações para livros didáticos (PNLD)
 
 - [ ] créditos **DEVEM** ser deslocados para o final do livro, com referência de origem
 - [ ] marcações **OBRIGATÓRIAS**
@@ -55,25 +77,3 @@
 	- [ ] b. Readium ou outro leitor a ser criado/fornecido pelo MEC
 	- [ ] c. verificação manual
 
-## Verificação Booknando
-- [ ] Todo texto deve ser disponibilizado em uma ordem de leitura lógica
-- [ ] Separação entre conteúdo (HTML) e apresentação (CSS)
-- [ ] Uso de sumários e sistemas de navegação
-	- [ ] Nav
-	- [ ] page-list
-	- [ ] landmarks
-- [ ] Estrutura significativa com as tags HTML
-- [ ]  Defina o conteúdo de cada etiqueta
-	- [ ] Uso do epub:type
-	- [ ] Uso do ARIA
-- [ ] Imagens somente para imagens e não para tabelas ou texto
-- [ ]  Tag alt para a descrição das imagens
-- [ ] Numeração de página (epub:type="pagebreak")
-- [ ] Língua do documento em cada HTML: pt-br
-- [ ] MathML
-- [ ] Acesso alternativo ao conteúdo multimídia
-- [ ] Interações acessíveis
-- [ ] Metadados de acessibilidade
-- [ ] Verificação com o ACE - consórcio Daisy
-- [ ] Verificação do editor
-- [ ] Verificação manual de sincronicidade
