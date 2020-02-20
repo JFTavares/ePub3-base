@@ -7,7 +7,7 @@ O objetivo é ajudar a melhorar as boas práticas de produção de livros digita
 - Modificado o arquivo Design CSS
 - Eliminado o arquivo fontes.css
 - Acrescentado checklist de acessibilidade
-- outubro 2018
+- Fevereiro 2020
 
 # Estrutura dos arquivos
 A pasta **modeloCapa** contém dois arquivos, um arquivo HTML e um CSS. Este modelo funciona na maioria dos aparelhos leitores. Basta acrescentar a imagem de capa modificando o HTML.
