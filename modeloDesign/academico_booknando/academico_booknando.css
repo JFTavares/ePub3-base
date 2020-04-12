@@ -78,6 +78,7 @@ p, li {
     text-indent: 1.5em;
 }
 
+
 p.firstPara {
     text-indent: 0em;
 }
@@ -209,9 +210,17 @@ p.firstPara:first-letter {
 
 blockquote {
     margin-left: 2.5em;
-    margin-right: 1em;
     text-indent: 0em;
-    text-align: left;
+    font-family: Georgia, Palatino, serif;
+    font-size: 0.9em;
+    font-style: normal;
+    font-weight: normal;
+    text-indent: 0em;
+    line-height: 1.4em;
+    text-align: justify;
+    margin-bottom: 1em;
+    text-indent: 0em;
+		margin-right: 0;
 }
 
 blockquote p {
