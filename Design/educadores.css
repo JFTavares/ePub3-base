@@ -1,0 +1,469 @@
+/*  Booknando — CSS framework for reflowable eBooks      
+    Version 0.2 by José Fernando Tavares
+*/
+
+
+
+@charset "UTF-8";
+
+/* NAMESPACES */
+@namespace h "http://www.w3.org/1999/xhtml/";
+@namespace epub "http://www.idpf.org/2007/ops";
+
+/* DECLARAÇÃO DE FONTES */
+
+
+/* Garante compatibilidade com leitores de epub2 */
+article,
+aside,
+figure,
+figcaption,
+footer,
+header,
+main,
+nav,
+section {
+  display: block;
+}
+[hidden] {
+  display: none;
+}
+
+/* ePub3 - Tenta prevenir erros no nav */
+nav[epub|type~="toc"] ol {
+  list-style: none !important;
+}
+/* ePub3 - Tenta prevenir erros no nav */
+nav[epub|type~="landmarks"],
+nav[epub|type~="page-list"] {
+  display: none;
+}
+nav[epub|type~="toc"] ol li:first-child {
+display: none;
+}
+
+nav[epub|type~="toc"] ol li:last-child {
+display: none;
+}
+
+nav[epub|type~="toc"] h1 {
+margin-bottom: 4em;
+}
+
+nav[epub|type~="toc"] li span {
+display: block;
+font-style: italic;
+}
+
+/* ePub3 - Tenta prevenir erros em elementos inline */
+a,
+abbr,
+b,
+bdi,
+bdo,
+cite,
+code,
+data,
+del,
+dfn,
+ins,
+kbd,
+mark,
+q,
+rp,
+rt,
+rtc,
+ruby,
+s,
+samp,
+small,
+span,
+strong,
+sub,
+sup,
+time,
+var {
+  font-size: inherit;
+  vertical-align: baseline;
+  font-style: inherit;
+  font-weight: inherit;
+  color: inherit;
+  text-decoration: none;
+}
+q {
+  quotes: none;
+}
+
+/* ePub3 - Tenta prevenir páginas em branco */
+body > :last-child,
+body > section > :last-child {
+  margin-bottom: 0;
+}
+
+/* Definir as margens, sobretudo para ADE e derivados. */
+@page {
+margin-left: 1em;
+margin-right: 1em;
+margin-top: 0.5em;
+margin-bottom: 0.5em;
+}
+
+/* Remove as margens, sobretudo em sistemas webkit. */
+body {
+  margin: 0;
+}
+
+
+/*  Desativa a hifenização nos elementos abaixo */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+blockquote p cite,
+dt,
+pre,
+address,
+table,
+caption,
+th,
+td,
+.no-hyphens {
+  adobe-hyphenate: none;  /* ADOBe*/
+  -ms-hyphens: none;
+  -moz-hyphens: none;
+  -webkit-hyphens: none;
+  -epub-hyphens: none;
+  hyphens: none;
+}
+/*  Controle de quebra de página */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+dt,
+hr {
+  page-break-inside: avoid;
+  break-inside: avoid;
+  page-break-after: avoid;
+  break-after: avoid;
+}
+
+/* Controle de orfãs e viúvas para todo o texto */
+p,
+blockquote {
+  orphans: 2;
+  widows: 2;
+}
+
+
+
+/*  Ativa a Hifenização para parágrafos */
+p,
+figcaption, 
+li {
+	  -epub-hyphens: auto;
+  -webkit-hyphens: auto;
+     -moz-hyphens: auto;
+          hyphens: auto;
+}
+
+/* Elementos básicos */
+a
+    {
+    color:inherit;
+    text-decoration:none;
+  	}
+img
+    {
+    max-width:100%;
+    }
+sup 
+	{ 
+	font-size:65%; 
+	vertical-align:0.4em;
+	}
+sub
+	{ 
+	font-size:65%; 
+	vertical-align:-0.4em;
+	}
+small {
+	font-size: 80%;
+	}
+/* Altera comportamento no bloco de citação*/
+
+blockquote p i,
+blockquote p em,
+blockquote p cite {
+  font-style: normal;
+}
+
+/* ELEMENTOS DE DESIGN 
+Inserir formatação dos livros daqui em diante
+*/
+ /*sumário*/
+
+
+
+#toc ol {
+	list-style-type: none;
+	padding-left: 1em;
+}
+#toc ol li {
+    margin-left: 0em;
+    text-indent: 0;
+	margin-top: 0em;
+	margin-bottom: 0em;
+	padding-top: 0.5em;
+
+}
+#toc ol li li {
+    margin-left: 0em;
+    margin-top: 0em;
+    text-indent: 0;
+	padding: 0;
+}
+
+
+
+/*títulos */
+h1 {
+   font-family: Georgia, sans-serif;
+	font-size:1.3em;
+	font-weight:normal;
+	margin-top: 2em;
+	margin-bottom:3em;
+	text-align:center;
+	text-indent:0em;
+}
+
+
+h2 {
+   font-family: Georgia, sans-serif;
+	font-size:1.1em;
+	font-weight:bold;
+	margin-top: 2em;
+	margin-bottom:1em;
+	text-align:left;
+	text-indent:0em;
+}
+
+h3 {
+   font-family: Georgia, sans-serif;
+	font-size:1.1em;
+	font-weight:normal;
+	font-style:italic;
+	margin-top: 2em;
+	margin-bottom:1em;
+	text-align:left;
+	text-indent:0em;
+}
+
+
+
+/*texto*/
+p {
+    font-family: Georgia, serif;
+    font-size: 1em;
+    font-style: normal;
+	font-weight: normal;
+    margin:0;
+    text-indent: 0em;
+    line-height: 1.4em;
+    text-align: justify;
+	margin-bottom: 0.3em;
+	text-indent:1.5em;
+    }
+
+li {
+    font-family: Georgia, serif;
+    font-size: 1em;
+    font-style: normal;
+	font-weight: normal;
+    text-indent: 0em;
+    line-height: 1.4em;
+}
+
+
+a.note {
+	font-size: 0.7em;
+	vertical-align: 0.3em;
+	line-height: 1em;
+}
+
+ol.footnotes {
+	margin-top: 2em;
+	border-top: 1px solid;
+	padding-top: 1em;
+	padding-left: 1.5em;
+}
+
+ol.footnotes li p {
+	text-indent: 0;
+}
+
+
+
+.noindent1 {
+	margin-top: 2em;
+	text-indent:0em;
+}
+section.footnote {
+margin-top: 1em;
+padding-top: 0.5em;
+}
+
+._idFootnote {
+	font-size:0.8em;
+	margin-top: 0.3em;
+	margin-bottom:0em;
+	text-align:left;
+	text-indent:0em;
+}
+blockquote {
+	font-family: Georgia, serif;
+	font-size:0.9em;
+	margin-left: 3em;
+	text-align:justify;
+line-height: 1.4em;
+	text-indent:0em;
+	margin-right: 0;
+}
+.cita2 {
+	font-size:0.9em;
+	margin-left: 2em;
+	text-align:justify;
+	text-indent:0em;
+	margin-left: 2em;
+}
+.citat {
+	font-size:0.9em;
+	margin-top: 1.2em;
+	margin-left: 1.2em;
+	text-align:justify;
+	text-indent:0em;
+}
+.cita1b {
+	font-size:0.9em;
+	margin-bottom:1.2em;
+	margin-left: 1.2em;
+	text-align:justify;
+	text-indent:0em;
+}
+.cita2b {
+	font-size:0.9em;
+	margin-bottom:1.2em;
+	margin-left: 2em;
+	text-align:justify;
+	text-indent:0em;
+}
+.citar {
+	font-size:0.9em;
+	margin-bottom:1.2em;
+	margin-left: 1.2em;
+	text-align:right;
+	text-indent:0em;
+}
+.citacao {
+	font-size:0.9em;
+	margin-top:1.2em;
+	margin-bottom:1.2em;
+	margin-left: 1.2em;
+	text-align:justify;
+	text-indent:0em;
+}
+.autor {
+font-variant: small-caps;
+}
+
+.autorRight {
+font-variant: small-caps;
+text-align: right;
+}
+
+.perguntasFirst {
+text-indent: 0em;
+	margin-top: 1.5em;
+}
+
+.respostaFirst {
+text-indent: 0em;
+	margin-top: 3.5em;
+}
+
+.Citacao {
+	margin-top: 1em;
+	margin-bottom: 1em;
+	margin-left: 2em;
+	text-indent: 0;
+}
+
+.citacaoPergunta {
+	font-family: sans-serif;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	margin-left: 2em;
+	text-indent: 0;
+}
+
+.resposta {
+    text-indent: 0em;
+	margin-top: 1.5em;
+}
+
+._idFootnoteLink {
+font-size: 0.8em;
+vertical-align: 0.3em;
+line-height: 1em;
+
+}
+
+.rodape {
+text-indent: 0;
+}
+
+/*imagens*/
+figure
+	{
+	text-align: center;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+	}
+figcaption {
+	font-size:0.8em;
+	margin-left: 20%;	
+	margin-right: 20%;
+	margin-bottom:1.5em;
+	text-align:center;
+	text-indent:0em;
+	page-break-before: avoid;
+}
+/* cronologia e bibliografia */
+
+/* copyright */
+p.creditos {
+    text-align: left;
+	text-indent: 0;
+font-size: 0.9em;
+}
+	
+	
+/*Info para Amazon*/
+@media amzn-kf8
+{
+a {
+color: inherit;
+}
+}
+@media amzn-mobi
+{
+a {
+color: inherit;
+}
+} 
+
