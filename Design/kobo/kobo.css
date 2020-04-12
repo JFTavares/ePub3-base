@@ -1,0 +1,505 @@
+/* ====================================	*/
+/* SUMARIO 							   	*/
+/* 1 - Fontes embutidas 				*/
+/* 2 - Corpo do eBook e page 			*/
+/* 3 - Definições gerais para o texto 	*/
+/* 4 - Folha de rosto 				  	*/
+/* 5 - Créditos e agradecimentos 		*/
+/* 6 - Capítulos e sub-capítulos 		*/
+/* 7 - Texto do sumário interno 		*/
+/* 8 - Nota de rodapé e numeração 		*/
+/* 9 - Listas 							*/	
+/* 10 - Texto de código 				*/
+/* 11 - Outros textos 					*/
+/* 12 - Tabela 							*/
+/* ====================================	*/
+
+
+
+/* 1 - Fontes embutidas */
+
+@font-face {
+	font-family:Comfortaa;
+	font-style:normal;
+	font-weight:normal;
+	src : url("../Fonts/Comfortaa-Regular.ttf");
+}
+@font-face {
+	font-family:Comfortaa;
+	font-style:normal;
+	font-weight:bold;
+	src : url("../Fonts/Comfortaa-Bold.ttf");
+}
+
+
+/* 2 - Corpo do eBook e page */
+
+@page {
+	margin : 5px 5px 5px 5px;
+}
+
+/* 3 - Definições gerais para o texto */
+
+body, div, dl, dt, dd, h1, h2, h3, h4, h5, h6, p, pre, code, blockquote {
+	margin:0;
+	padding:0;
+	border-width:0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+-webkit-hyphens: none !important;
+adobe-hyphenate: none;
+-moz-hyphens: none;
+hyphens: none;
+-epub-hyphen: none;
+}
+
+p {
+	-epub-text-align-last:left;
+	font-family:Georgia, serif;
+	font-size:1em;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.4em;
+	margin-bottom:0;
+	margin-left:0;
+	margin-right:0;
+	margin-top:0.5em;
+	text-align:justify;
+	text-indent:0;
+	widows:2;
+	orphans:2;
+}
+
+a {
+	color:#394c4e;
+	text-decoration:none;
+	border-bottom: 1px dotted #de3047;
+}
+
+
+
+
+
+
+/* 4 - Folha de rosto */
+
+div.backgroundRosto {
+background-color: #59BFCE;
+width: 100%;
+padding-top: 1em;
+padding-bottom: 1em;
+padding-left: 0.5em;
+padding-right: 0.5em;
+
+}
+
+h1.tituloLivro {
+	color:#ffffff;
+	font-family:Comfortaa, sans-serif;
+	font-size:2em;
+	font-style:normal;
+	font-weight:normal;
+	line-height:1.4em;
+	margin-bottom:0.5em;
+	margin-left:0;
+	margin-right:0;
+	margin-top:1em;
+	page-break-after:avoid;
+	page-break-before:avoid;
+	text-align:center;
+	text-indent:0;
+	border: none;
+	padding:0;
+}
+
+h1.tituloLivro span {
+font-size: 1.2em;
+}
+
+p.autor {
+	color:#ffffff;
+	font-family:Comfortaa, sans-serif;
+	font-size:1.2em;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.4em;
+	margin-bottom:0;
+	margin-left:0;
+	margin-right:0;
+	margin-top: 0em;
+	page-break-after:avoid;
+	text-align:center;
+	text-indent:0;
+}
+
+div.editor {
+text-align: center;
+margin-top: 20%;
+}
+
+p.subTituloLivro {
+	color:#de3047;
+	font-family:Comfortaa, sans-serif;
+	font-size:1.3em;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.4em;
+	margin-bottom:0;
+	margin-left:0;
+	margin-right:0;
+	margin-top:0;	
+	text-align:center;
+	text-indent:0;
+}
+
+
+
+
+/* 5 - Créditos e agradecimentos */
+
+p.creditos {
+	font-size:0.8em;
+	-webkit-hyphens: none !important;
+	adobe-hyphenate: none;
+	-moz-hyphens: none;
+	hyphens: none;
+	-epub-hyphen: none;
+}
+
+
+p.agradecimento {
+	text-align:left;
+	-webkit-hyphens: none !important;
+	adobe-hyphenate: none;
+	-moz-hyphens: none;
+	hyphens: none;
+	-epub-hyphen: none;
+}
+
+
+
+
+
+/* 6 - Capítulos e sub-capítulos */
+h1 {
+	color:#de3047;
+	font-family:Comfortaa, sans-serif;
+	font-size:1.7em;
+	font-style:normal;
+	font-weight:normal;
+	line-height:1.4em;
+	margin-bottom:2em;
+	margin-left:0;
+	margin-right:0;
+	margin-top:0em;
+	page-break-after:avoid;
+	text-align:left;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	border-bottom: 1px solid #de3047;
+	border-left: 1em solid;
+	padding-left: 0.5em;
+	padding-top: 0.5em;
+
+}
+
+h2 {
+	color:#00adea;
+	font-family:Comfortaa, sans-serif;
+	font-size:1.3em;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:bold;
+	line-height:1.4em;
+	margin-bottom:0;
+	margin-left:0;
+	margin-right:0;
+	margin-top:1.5em;
+	page-break-after:avoid;
+	text-align:left;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+}
+
+h3 {
+	-epub-text-align-last:left;
+	color:#000000;
+	font-family:Georgia, serif;
+	font-size:1em;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:bold;
+	line-height:1.333;
+	margin-bottom:9px;
+	margin-left:0;
+	margin-right:0;
+	margin-top:9px;
+	orphans:2;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:justify;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:2;
+}
+	
+/* 7 - Texto do sumário interno */
+
+nav ol li {
+list-style-type: none;
+}
+
+nav ol li li {
+list-style-type: none;
+font-style: italic;
+}
+
+nav ol li a {
+border: none;
+}
+	
+/* 8 - Nota de rodapé e numeração das notas */	
+	
+p.notasRodape {
+	-epub-text-align-last:left;
+	font-size:0.9em;
+}
+
+div._idFootnote {
+	margin-top:0.5em;
+}
+
+a._idFootnoteLink, a._idFootnoteAnchor {
+color: #de3047;
+border: none;
+}
+
+._idFootnoteLink:before {
+content: " [ nota ";
+}
+
+._idFootnoteLink:after {
+content: " ]";
+}
+
+._idFootnoteAnchor:before {
+content: " [ nota ";
+}
+
+._idFootnoteAnchor:after {
+content: " ]";
+}
+
+
+._idFootnotes {
+margin-top: 1em;
+/* border-top: 1px solid #00adea; Linha removida para notas pop-up*/
+padding-top: 1em;
+}
+
+/* 9 - Listas */	
+	
+li {
+	color:#000000;
+	font-family:Georgia, serif;
+	font-size:1em;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.4;
+	list-style-position:outside;
+	list-style-type:disc;
+	margin-bottom:0;
+	margin-right:0;
+	margin-top:0;
+	orphans:1;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-align:left;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:1;
+}
+
+li.listaNumeradaInicio {
+	list-style-position:outside;
+	list-style-type:decimal;
+}
+
+li.listaNumerada {
+	color:#000000;
+	font-family:Georgia, serif;
+	font-size:1em;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.4em;
+	list-style-position:outside;
+	list-style-type:decimal;
+	margin-bottom:0;
+	margin-right:0;
+	margin-top:0.2em;
+	text-align:left;
+	text-decoration:none;
+	text-indent:0;
+}
+
+
+li.subSubLista {
+	list-style-position:outside;
+	list-style-type:square;
+}
+
+
+
+li.sublistaNaoNumerada {
+	list-style-position:outside;
+	list-style-type:disc;
+}
+
+
+
+/* 10 - Texto de código */	
+
+
+
+code {
+	display: block;
+	color:#000000;
+	font-family:Courier, monotype, serif;
+	text-align:left;
+	font-size:0.9em;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.2;
+	margin-bottom:0;
+	margin-left:0;
+	margin-right:0;
+	margin-top:0;
+	orphans:2;
+	page-break-after:auto;
+	page-break-before:auto;
+	text-decoration:none;
+	text-indent:0;
+	text-transform:none;
+	widows:2;
+}
+
+code.CodeEntrada {
+	margin-left:2em;
+}
+
+/* 11 - Outros textos */
+
+p.gostou {
+	color:#de3047;
+	font-family:Comfortaa, sans-serif;
+	font-size:1.5em;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.4em;
+	margin-bottom:0;
+	margin-left:0;
+	margin-right:0;
+	margin-top:2em;
+	text-align:center;
+	text-indent:0;
+}
+p.gostouLink {
+	color:#59BFCE;
+	font-family:Comfortaa, sans-serif;
+	font-size:1.3em;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:normal;
+	line-height:1.4em;
+	margin-bottom:0;
+	margin-left:0;
+	margin-right:0;
+	margin-top:3em;
+	text-align:center;
+}
+
+p.textoNomeAutor {
+	font-size:0.8em;
+	font-style:italic;
+	margin-bottom:0;
+	margin-left:0;
+	margin-right:0;
+	text-align:right;
+}
+
+/* 12 - Tabela */	
+				
+
+table {
+	border-collapse:collapse;
+	border-color:#000000;
+	border-style:solid;
+	border-width:1px;
+	margin-bottom:0;
+	margin-top:1em;
+}
+
+thead td {
+	background-color: #394C4F;
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+}
+
+thead td p {
+	color: #ffffff;
+	font-size: 0.8em;
+}
+
+
+td {
+	border-left-width:1px;
+	border-left-style:solid;
+	border-left-color:#000000;
+	border-top-width:1px;
+	border-top-style:solid;
+	border-top-color:#000000;
+	border-right-width:1px;
+	border-right-style:solid;
+	border-right-color:#000000;
+	border-bottom-width:1px;
+	border-bottom-style:solid;
+	border-bottom-color:#000000;
+	padding: 0.2em;
+	vertical-align:middle;
+}
+
+tr:nth-child(odd) {
+background-color: #9DCFD6;
+}
+
+tbody tr {
+	page-break-after:auto;
+	page-break-before:auto;
+}
+
+td p {
+text-align: center;
+}
+
+/* 13 - Imagens */
+
+img {
+max-width: 100%;
+max-height: 100%;
+}
+div.imagem {
+text-align: center;
+}
+

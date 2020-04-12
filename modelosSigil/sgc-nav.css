@@ -1,0 +1,26 @@
+/* Booknando */
+
+body {
+font-family: Georgia, serif;
+
+}
+
+
+nav#landmarks {
+    display:none;
+}
+
+nav#page-list {
+    display:none;
+}
+
+
+ol {
+    list-style-type: none;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+

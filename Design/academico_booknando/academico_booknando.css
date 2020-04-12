@@ -1,0 +1,494 @@
+@charset "utf-8";
+@font-face {
+    font-family: 'texgyrepagella';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../Fonts/TeXGyrePagella-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'texgyrepagella';
+    font-weight: bold;
+    font-style: normal;
+    src: url('../Fonts/TeXGyrePagella-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'texgyrepagella';
+    font-weight: normal;
+    font-style: italic;
+    src: url('../Fonts/TeXGyrePagella-Italic.ttf');
+}
+
+@font-face {
+    font-family: 'texgyrepagella';
+    font-weight: bold;
+    font-style: italic;
+    src: url('../Fonts/TeXGyrePagella-BoldItalic.ttf');
+}
+
+/* Define as margens, sobretudo para ADE e derivados. */
+@page {
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+/* Remove as margens, sobretudo em sistemas webkit. */
+body {
+    margin: 0;
+}
+
+/*  Desativa a hifenização nos titulos e a quebra das paginas. */
+h1, h2, h3, h4, h5, h6 {
+    -epub-hyphens: none;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    hyphens: none;
+    page-break-after: avoid;
+}
+
+/* Controle de orfãs e viúvas. */
+p, 
+blockquote {
+    orphans: 2;
+    widows: 2;
+}
+
+/*  Hifenização para paragráfos. */
+p, figcaption {
+    -epub-hyphens: auto;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+}
+
+/*  Estilos do texto */
+p, li {
+    font-family: Georgia, Palatino, serif;
+    font-size: 1em;
+    font-style: normal;
+    font-weight: normal;
+    margin: 0;
+    text-indent: 0em;
+    line-height: 1.4em;
+    text-align: justify;
+    margin-bottom: 0.7em;
+    text-indent: 1.5em;
+}
+
+p.firstPara {
+    text-indent: 0em;
+}
+
+a {
+    color: #fc8100;
+    text-decoration: none;
+}
+.space {
+	margin-top: 2em;
+}
+p.autor {
+    font-family: "texgyrepagella";
+}
+
+h1 {
+    font-family: "texgyrepagella", Georgia, serif;
+    font-weight: normal;
+    text-transform: none;
+    text-align: left;
+    text-decoration: none;
+    line-height: normal;
+    font-size: 1.2em;
+	margin-top: 2em;
+    margin-bottom: 0.5em;
+}
+
+h1.tituloLivro {
+    font-family: "texgyrepagella", Georgia, serif;
+    margin-top: 10%;
+text-align: center;
+}
+
+h1.tituloLivro span {
+    font-size: 1.5em;
+}
+
+h2 {
+    font-family: "texgyrepagella";
+    font-weight: bold;
+	font-style: italic;
+    text-transform: none;
+    text-align: left;
+    text-decoration: none;
+    line-height: normal;
+    font-size: 1em;
+	margin-top: 2em;
+    margin-bottom: 0.5em;
+}
+
+h3 {
+    font-family: "texgyrepagella";
+    font-weight: bold;
+    text-transform: none;
+    text-align: left;
+    text-decoration: none;
+    line-height: normal;
+    font-size: 1em;
+	margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+h4 {
+    font-family: "texgyrepagella";
+    font-weight: normal;
+    text-transform: none;
+    text-align: left;
+    text-decoration: none;
+    line-height: normal;
+    font-size: 1em;
+	margin-top: 1em;
+    margin-bottom: 0.5em;
+}
+
+h5 {
+    font-family: "texgyrepagella";
+    font-weight: normal;
+    text-transform: none;
+    text-align: left;
+    text-decoration: none;
+    line-height: normal;
+    font-size: 1em;
+	margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+p.firstPara:first-line {
+    font-variant: small-caps;
+    font-size: 1.1em;
+}
+
+p.firstPara:first-letter {
+    font-size: 2.9em;
+    float: left;
+    line-height: 1em;
+    margin-bottom: -0.2em;
+}
+
+.autor {
+    font-size: 1em;
+    text-indent: 0em;
+    text-align: center;
+    margin-bottom: 1.17em;
+    text-indent: 0em;
+}
+
+.noindent {
+    text-indent: 0em;
+}
+
+.creditos {
+    font-size: .9em;
+    text-indent: 0em;
+    text-align: left;
+    margin-left: 0;
+    margin-bottom: 1em;
+    text-indent: 0em;
+}
+
+.creditos1 {
+    font-size: .9em;
+    text-indent: 0em;
+    text-align: left;
+    margin-left: 0;
+    margin-bottom: 1em;
+    margin-top: 5%;
+    text-indent: 0em;
+}
+
+blockquote {
+    margin-left: 2.5em;
+    margin-right: 1em;
+    text-indent: 0em;
+    text-align: left;
+}
+
+blockquote p {
+    font-size: 0.95em;
+    text-indent: 0em;
+}
+
+.left {
+    text-align: left;
+}
+
+.center {
+    text-align: center;
+    text-indent: 0em;
+}
+
+.right {
+    text-align: right;
+}
+
+.bold, strong, b {
+    font-weight: bold;
+}
+
+.italic, em, i {
+    font-style: italic;
+}
+
+img {
+    max-width: 100%;
+}
+
+pre {
+    margin: 0;
+    font-family: monospace;
+    text-indent: 0em;
+    text-align: left;
+    font-size: .80em;
+    white-space: pre-wrap;
+}
+
+table {
+    border-collapse: collapse;
+	margin-top: 1.2em;
+	margin-bottom: 1.2em;
+	width: 100%;
+}
+
+tr {
+}
+
+td {
+    border: 1px solid black;
+    text-align: left;
+}
+
+.break {
+    page-break-before: always;
+}
+
+hr {
+    width: 70%;
+    margin-left: 15%;
+}
+
+    
+span.fakesmallcaps {
+    font-size: .75em;
+}
+
+div.boxImagem, div.boxVideo {
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+a.touchLink {
+    color: #c92a17;
+}
+
+div.boxTexto {
+    border: 2px solid #c92a17;
+    padding: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    max-width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    -webkit-box-shadow: 16px 17px 15px -20px rgba(0,0,0,0.67);
+    -moz-box-shadow: 16px 17px 15px -20px rgba(0,0,0,0.67);
+    box-shadow: 16px 17px 15px -20px rgba(0,0,0,0.67);
+    background-color: #feefed;
+    display: none;
+}
+
+div.boxTexto p {
+    text-indent: 0;
+}
+
+p.escolha {
+    text-align: center;
+    text-indent: 0;
+    margin: 0;
+}
+
+p.legenda {
+    font-family: sans-serif;
+    text-indent: 0;
+    text-align: center;
+    margin: 0;
+}
+
+p.voltar {
+    text-align: center;
+    margin-top: 1em;
+    text-indent: 0;
+}
+
+p.notasRodape {
+    font-size: 0.9em;
+    text-indent: 0;
+}
+
+p.referencia {
+    text-indent: 0;
+}
+
+p.autores {
+    text-align: left;
+    font-size: 0.9em;
+    margin: 0;
+text-indent: 0;
+}
+
+p.data {
+    text-align: right;
+    font-size: 0.9em;
+}
+
+header {
+    margin-bottom: 10%;
+}
+
+div.footnotes {
+    margin-top: 3em;
+    border-top: 1px solid;
+    padding-top: 0.5em;
+}
+
+ol.endnotes {
+    padding-left: 1.2em;
+    margin-top: 2em;
+}
+
+ol.endnotes li {
+    font-family: "texgyrepagella";
+    font-weight: normal;
+    font-size: 0.8em;
+    line-height: 1.2em;
+    margin: 0;
+}
+
+ol.endnotes p {
+    text-indent: 0;
+}
+
+ul, 
+ol {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+li {
+    font-weight: normal;
+    font-size: 1em;
+    line-height: 1.4em;
+    text-align: left;
+text-indent: 0;
+}
+
+div.logoEditora {
+    text-align: center;
+    margin-top: 10%;
+}
+
+div.logofamper {
+    text-align: left;
+    margin-top: 5%;
+}
+
+p.tituloImagem {
+    font-family: sans-serif;
+}
+
+p.toc1 {
+    margin-left: 0em;
+    text-indent: 0;
+}
+p.toc2 {
+    margin-left: 2em;
+    text-indent: 0;
+}
+p.toc3 {
+    margin-left: 4em;
+    text-indent: 0;
+}
+p.toc4 {
+    margin-left: 6em;
+    text-indent: 0;
+}
+
+p.email {
+text-indent: 0;
+font-size: 0.9em;
+font-family: sans-serif;
+text-align: center;
+}
+
+div.boxImagemGrupo {
+margin-top: 1.5em;
+margin-bottom: 1.5em;
+text-align: left;
+width: 45%;
+}
+
+div.autores p {
+margin: 0;
+font-size: 0.8em;
+text-align: right;
+}
+
+
+
+section.referencia p {
+text-indent: 0;
+text-align: left;
+}
+
+.footnotes {
+margin-top: 2em;
+}
+
+.footnotes ol {
+margin-left: 0;
+text-indent: 0;
+}
+
+
+
+.footnotes li p {
+margin-left: 0;
+text-indent: 0;
+}
+
+li p {
+text-indent: 0;
+}
+
+#toc h1 {
+margin-bottom: 10%;
+}
+
+#toc ol li {
+list-style-type: none;
+}
+
+.sumario p {
+text-indent: 0;
+font-size: 0.7em;
+margin: 0;
+text-align: left;
+}
+
+p.toc {
+font-size: 1em;
+margin-top: 1em;
+}
