@@ -1,7 +1,9 @@
 # Modelo de livro digital no formato ePub3
 Este é um modelo básico de de ePub3. 
+
 Você pode ajudar a manter e melhorar os arquivos e pode utilizar este modelo como base para seus projetos.
 O objetivo é ajudar a melhorar as boas práticas de produção de livros digitais.
+
 Este material está ligado ao curso sobre Sigil da plataforma Booknando: <https://cursos.booknando.com.br/curso/como-criar-livros-digitais-com-o-sigil>
 
 # Atualizações
