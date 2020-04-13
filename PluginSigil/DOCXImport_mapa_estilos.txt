@@ -1,0 +1,6 @@
+p[style-name='Block Text'] => blockquote
+p[style-name='Title'] => h1.tituloLivro:fresh
+p[style-name='autor'] => p.autor:fresh
+p[style-name='creditos'] => p.creditos:fresh
+p[style-name='cronologia'] => p.cronologia:fresh
+p[style-name='bibliografia'] => p.bibliografia:fresh
